@@ -1,3 +1,4 @@
+import datetime
 import time
 
 from selenium import webdriver
@@ -26,6 +27,10 @@ print("Click Login Button")
 # print(value_text_products)
 # assert value_text_products == "PRODUCTS"
 # print("GOOD")
+time.sleep(2)
+now_date = datetime.datetime.utcnow().strftime("%Y_%m_%d_%H:%M:%S")
+name_screenshot = f'screenshot_{now_date}.png'
+driver.save_screenshot(f'/home/dmitry/Geek/PycharmProjects/python_selenium/screen/{name_screenshot}')
 
 url = "https://www.saucedemo.com/inventory.html"
 get_url = driver.current_url
