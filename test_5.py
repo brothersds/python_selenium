@@ -34,6 +34,12 @@ link_about = driver.find_element(By.XPATH, "//a[@id='about_sidebar_link']")
 link_about.click()
 print("Click Link Button")
 
+"""Step back"""
+driver.back()
+print("Go Back")
+time.sleep(2)
+driver.forward()
+print("Go Forward")
 
 time.sleep(1)
 driver.close()
